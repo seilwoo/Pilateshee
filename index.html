@@ -299,7 +299,7 @@
 
 .thumbnail {
   width: 100%;
-  aspect-ratio: 1 / 1; /* 정사각형 비율 유지 */
+  aspect-ratio: 1 / 1.2; /* 정사각형 비율 유지 */
 }
 
 .thumbnail img {
@@ -416,19 +416,147 @@
 
     <section id="services" class="section">
       <h2>우리의 프로그램</h2>
-      <div style="display: flex; justify-content: center; gap: 20px;">
-        <div class="service">
-          <img src="https://via.placeholder.com/300x200" alt="매트 필라테스">
-          <h3 onclick="openModal('매트 필라테스', this.previousElementSibling.src, this.nextElementSibling.innerHTML)" style="cursor: pointer;">매트 필라테스</h3>
-          <p>기본적인 필라테스 동작을 매트를 이용하여 진행합니다.</p>
-        </div>
-        <div class="service">
-          <img src="https://via.placeholder.com/300x200" alt="리포머 필라테스">
-          <h3 onclick="openModal('리포머 필라테스', this.previousElementSibling.src, this.nextElementSibling.innerHTML)" style="cursor: pointer;">리포머 필라테스</h3>
-          <p>리포머 장비를 이용한 보다 강도 높은 수업입니다.</p>
-        </div>
-      </div>
-    </section>
+  <style>
+  body {
+    margin: 0;
+    font-family: 'Pretendard', sans-serif;
+    background-color: #f9f7ec;
+    color: #333;
+  }
+
+  section.programs {
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  section.programs h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #2e3d27;
+  }
+
+  .program-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .program-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: left;
+    transition: transform 0.2s ease;
+  }
+
+  .program-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .program-card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+  }
+
+  .program-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #344e41;
+  }
+
+  .program-card p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    white-space: pre-line;
+  }
+</style>
+
+<section id="services" class="programs">
+  <div class="program-list">
+
+    <div class="program-card">
+      <h3>재활 필라테스</h3>
+      <p>
+산후, 체형 및 운동 평가를 통해 출산 후 신체 회복을 도와드립니다.
+📍 복직근 이개 회복 운동
+📍 출산 경험이 있는 강사님의 전문 수업
+      </p>
+    </div>
+
+
+    <div class="program-card">
+      <h3>STOTT 필라테스</h3>
+      <p>
+왜 STOTT인가요?
+✅ 해부학 기반의 현대 필라테스
+✅ 재활·의학 전문가들과 공동 개발
+✅ 국제 공인 자격, 커리어 활용도 높음
+✅ 근골격계에 안전한 운동 설계
+📍 STOTT PILATES 기반 필라테스 교육
+      </p>
+    </div>
+
+
+
+    <div class="program-card">
+      <h3>리포머 필라테스</h3>
+      <p>
+리포머 장비를 활용하여 보다 강도 높은 수업 진행
+📍 전신 근력 강화
+📍 정렬과 유연성 향상
+📍 체형 교정에 탁월
+      </p>
+    </div>
+
+    <div class="program-card">
+      <h3>매트 필라테스</h3>
+      <p>
+기본적인 필라테스 동작을 매트를 이용해 진행
+📍 기초 체력 강화
+📍 코어 안정성 강화
+📍 초보자도 쉽게 참여 가능
+      </p>
+    </div>
+
+
+
+    <div class="program-card">
+      <img src="images/kids.jpg" alt="키즈 필라테스">
+      <h3>키즈 필라테스</h3>
+      <p>
+매주 화요일 4시 수업 (2025년 1/7, 1/14, 1/21)
+📍 바른 자세
+📍 키 성장
+📍 집중력 향상
+📍 운동수행능력 향상
+📍 스트레스 해소
+      </p>
+    </div>
+
+
+    <div class="program-card">
+      <img src="images/ptinform.jpg" alt="피티인폼 필라">
+      <h3>피티인폼 필라</h3>
+      <p>
+물리치료사가 알려주는 재활 필라테스 지도자 과정
+📍 3월 4일 개강 / 주말반 [19주 과정] 오픈
+📍 STOTT PILATES 기반 필라테스 교육
+📍 물리치료사 출신 강사진과 함께하는 실전 중심 교육
+      </p>
+    </div>
+
+
+
+
+  </div>
+</section>
+
+
 
     <section id="about" class="section">
       <h2>강사 소개</h2>
@@ -457,11 +585,79 @@
       </div>
     </section>
 
-    <section id="testimonials" class="section">
-      <h2>고객 후기</h2>
-      <p>"PILATES HEE 덕분에 몸이 한결 가벼워졌어요!"</p>
-    </section>
+<section id="testimonials" class="section">
 
+
+
+
+  <h2>고객 후기</h2>
+
+
+<section id="testimonials" class="section">
+  <!-- 이미지 4개 그리드 위에 배치 -->
+  <div class="image-thumbnails">
+    <div class="thumbnail">
+      <img src="review1.jpg" alt="고객 후기 1">
+    </div>
+    <div class="thumbnail">
+      <img src="review2.jpg" alt="고객 후기 2">
+    </div>
+    <div class="thumbnail">
+      <img src="review3.jpg" alt="고객 후기 3">
+    </div>
+    <div class="thumbnail">
+      <img src="review4.jpg" alt="고객 후기 4">
+    </div>
+  </div>
+<style>
+.image-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4개씩 그리드 */
+  gap: 20px;
+  max-width: 1000px; /* 최대 너비 설정 */
+  margin: 20px auto;
+}
+
+.thumbnail {
+  width: 100%;
+  aspect-ratio: 1 / 1.2; /* 정사각형 비율 유지 */
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.thumbnail:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 800px) {
+  .image-thumbnails {
+    grid-template-columns: repeat(2, 1fr); /* 800px 이하에서 2개씩 */
+  }
+}
+
+@media (max-width: 500px) {
+  .image-thumbnails {
+    grid-template-columns: 1fr; /* 500px 이하에서 1개씩 */
+  }
+}
+</style>
+
+
+  <div style="text-align: center; margin-top: 20px;">
+    <p>고객들의 실제 후기가 궁금하다면?</p>
+    <a href="https://pcmap.place.naver.com/place/1857967167/review/visitor?additionalHeight=76&from=map&fromPanelNum=1&locale=ko&svcName=map_pcv5&timestamp=202504211734" 
+       target="_blank" 
+       style="display: inline-block; padding: 12px 24px; background-color: #2e3d27; color: white; border-radius: 8px; text-decoration: none; font-weight: bold;">
+      👉 네이버 리뷰 보러가기
+    </a>
+  </div>
+</section>
 
 
 <section id="events" class="section">
